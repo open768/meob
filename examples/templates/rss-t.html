@@ -1,0 +1,18 @@
+[[rssinclude rssitem http://www.kassirhussain.com/?feed=rss2]]
+
+<p><b>[[title]]</b></p>
+<p> [[blurb]] </p>
+<hr/>
+<a href="http://www.kassirhussain.com/?feed=rss2">RSS feed</a>
+<table border=1>
+	[[repeat.rssitem]]
+	<tr><td><font face="arial" size=2>
+		<h2>[[loop.title]]</h2>
+		<p>[[loop.content:encoded]]</p>
+	</font></td></tr>
+	[[end repeat.rssitem]]
+</table>
+[[repeat.links]]
+  ([[loop]])<a href="[[loop.link]]">[[loop.caption]]</a> 
+[[end repeat.links]]
+

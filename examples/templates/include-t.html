@@ -1,0 +1,30 @@
+<p><b>Include Constructs</b></p>
+<p> [[blurb]] </p>
+<table border=1>
+	<tr>
+		<td>1[[include.fragments/part1.html]]</td>
+		<td>2[[include.fragments/part2.html]]</td>
+		<td>3[[include.fragments/part3.html]]</td>
+		<td>4[[include.fragments/part4.html]]</td>
+	</tr>
+	<tr>
+		<td>2[[include.fragments/part2.html]]</td>
+		<td/>&nbsp;
+		<td/>&nbsp;
+		<td>2[[include.fragments/part2.html]]</td>
+	</tr>
+	<tr>
+		<td>3[[include.fragments/part3.html]]</td>
+		<td/>&nbsp;
+		<td/>&nbsp;
+		<td>1[[include.fragments/part1.html]]</td>
+	</tr>
+	<tr>
+		<td>4[[include.fragments/part4.html]]</td>
+	</tr>
+	</td></tr>
+</table>
+[[repeat.links]]
+  ([[loop]])<a href="[[loop.link]]">[[loop.caption]]</a> 
+[[end repeat.links]]
+

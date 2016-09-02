@@ -1,0 +1,48 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<title>Untitled Document</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+<b>Heres an if construct in Meob</b>
+[[blurb1]]
+<p>
+<pre>
+	{delim}if.<i>var</i> {eq|ne|lt|gt} {var2|null}{delim}
+		<i>HTML fragment</i>
+	{delim}end if.<i>var</i>{delim}
+</pre>
+[[if.control1]]
+	<table border=1 width=100%><tr bgcolor=red><td>[[value1]]</td></tr></table>
+[[end if.control1]]
+<p>
+[[blurb2]]
+<p>
+[[if.control2]]
+	<table border=1 width=100%><tr bgcolor=green><td>[[value2]]</td></tr></table>
+[[end if.control2]]
+
+
+<hr>
+this displays something if the value of a control variable is a set value
+[[if.control3 eq 13]]
+	<table border=1 width=100%><tr bgcolor=red><td>[[control6]] = 13</td></tr></table>
+[[end if.control3]]
+this displays something if the value of a control variable is not equal
+[[if.control3 ne 13]]
+	<table border=1 width=100%><tr bgcolor=red><td>[[control3]] <> 13</td></tr></table>
+[[end if.control3]]
+this displays something if the value of a control variable matches that of another variable
+[[if.control3 eq userid]]
+	<table border=1 width=100%><tr bgcolor=red><td>control([[control3]]) = userid([[userid]])</td></tr></table>
+[[end if.control3]]
+<p>
+[[repeat.links]]
+  ([[loop]])<a href="[[loop.link]]">[[loop.caption]]</a> 
+[[end repeat.links]]
+
+</body>
+</html>

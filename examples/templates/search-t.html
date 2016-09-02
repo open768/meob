@@ -1,0 +1,21 @@
+<html>
+<body>
+<h2>Example search engine output</h2>
+<p>
+	Your Searched for [[query]]
+<p>
+	
+<ul>
+	[[repeat.results]]
+		<table border=1 cellpadding=5 cellspacing=0 width=100%><tr><td>
+			<a target="results" href="[[loop]]"><li>[[loop.summary]]</a> - [[loop.descrip]]
+		</td></tr></table><br><br>
+	[[end repeat.results]]
+</ul>
+<hr>
+[[repeat.links]]
+  ([[loop]])<a href="[[loop.link]]">[[loop.caption]]</a> 
+[[end repeat.links]]
+
+</body>
+</html>
