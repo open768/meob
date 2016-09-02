@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" ?> 
+<MEOB>
+	<DIV ID="document.title">Search example</DIV>
+	
+	<DIV ID="query">MEOB faster html</DIV>
+	<DIV ID="results.1">http://www.paglis.co.uk/meob</DIV>
+	<DIV ID="results.1.summary">meob</DIV>
+	<DIV ID="results.1.descrip">Everyone wins: your application server runs more efficiently and handles requests quicker, You can change the design of your web design without recoding the application and the browser loads pages more quickly and efficiently. And your browser and proxy servers can cache the non dynamic content better</DIV>
+
+	<DIV ID="results.2">http://www.paglis.co.uk/meob/doc.html</DIV>
+	<DIV ID="results.2.summary">meob documentation</DIV>
+	<DIV ID="results.2.descrip">heres some documentation to get you started</DIV>
+
+	<DIV ID="results.3">http://sdpml.mozdev.org/</DIV>
+	<DIV ID="results.3.summary">meob evolved from sdpml</DIV>
+	<DIV ID="results.3.descrip">so <i>SDPML</i> was a great start. MEOB builds on that</DIV>
+
+	<DIV ID="results.4">http://code.google.com/p/meob/</DIV>
+	<DIV ID="results.4.summary">were getting hosted on google code</DIV>
+	<DIV ID="results.4.descrip">MEOB is open source, but its also non commercial use. Is google groups right</DIV>
+
+	<DIV ID="results.5"><![CDATA[http://www.google.co.uk/search?hl=en&safe=off&q=%22Merge+on+browse%22&btnG=Search&meta=&aq=f&oq=]]></DIV>
+	<DIV ID="results.5.summary">Merge on Browse</DIV>
+	<DIV ID="results.5.descrip">not many hits on search engines - so still can be productised</DIV>
+
+	<DIV ID="results.6">http://code.google.com/p/meob/</DIV>
+	<DIV ID="results.6.summary">were getting hosted on google code</DIV>
+	<DIV ID="results.6.descrip">MEOB is open source, but its also non commercial use. Is google groups right</DIV>
+	
+	<DIV ID="results.7">http://www.paglis.co.uk/meob/tables-cols.html</DIV>
+	<DIV ID="results.7.summary">tables</DIV>
+	<DIV ID="results.7.descrip">tables are easy in MEOB</DIV>
+	
+	<DIV ID="results.8">http://www.paglis.co.uk/das_kuchen_studio/gallery/gallery1.htm</DIV>
+	<DIV ID="results.8.summary">complex</DIV>
+	<DIV ID="results.8.descrip">and MEOB works for complex pages too</DIV>
+
+	<DIV ID="results.9">http://creativecommons.org/licenses/by-nc-sa/3.0/</DIV>
+	<DIV ID="results.9.summary">non commercial</DIV>
+	<DIV ID="results.9.descrip">currently licensed for non commercial use, free but not free lunch.</DIV>
+	
+	<DIV ID="results.10">http://www.gnu.org/licenses/</DIV>
+	<DIV ID="results.10.summary">open source</DIV>
+	<DIV ID="results.10.descrip">also open source, though if there is a conflict between the two licenses, the creative commons license shall prevail.</DIV>
+
+	<DIV ID="results.11">http://www.paglis.co.uk/meob</DIV>
+	<DIV ID="results.11.summary">TODO</DIV>
+	<DIV ID="results.11.descrip">MEOB is a working proof of concept - it works fine as it is, but there are a few things I'd change given resources.</DIV>
+	
+	
+	
+	<DIV ID="links.1">1</DIV>
+	<DIV ID="links.1.link">index.html</DIV>
+	<DIV ID="links.1.caption">simple example</DIV>
+	<DIV ID="links.2">2</DIV>
+	<DIV ID="links.2.link">index2.html</DIV>
+	<DIV ID="links.2.caption">using javascript object</DIV>
+	<DIV ID="links.3">3</DIV>
+	<DIV ID="links.3.link">index3.html</DIV>
+	<DIV ID="links.3.caption">With loops</DIV>
+	<DIV ID="links.4">4</DIV>
+	<DIV ID="links.4.link">tables.html</DIV>
+	<DIV ID="links.4.caption">table example</DIV>
+	<DIV ID="links.5">5</DIV>
+	<DIV ID="links.5.link">tables-cols.html</DIV>
+	<DIV ID="links.5.caption">breaking table example</DIV>
+	<DIV ID="links.6">6</DIV>
+	<DIV ID="links.6.link">if.html</DIV>
+	<DIV ID="links.6.caption">if example</DIV>
+	<DIV ID="links.7">7</DIV>
+	<DIV ID="links.7.link">doc.html</DIV>
+	<DIV ID="links.7.caption">documentation</DIV>
+	<DIV ID="links.8">8</DIV>
+	<DIV ID="links.8.link">include.html</DIV>
+	<DIV ID="links.8.caption">using includes</DIV>
+	<DIV ID="links.9">9</DIV>
+	<DIV ID="links.9.link">search.html</DIV>
+	<DIV ID="links.9.caption">example search page</DIV>
+</MEOB>
