@@ -1,0 +1,30 @@
+<html>
+<body>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<div id="MEOB" style="display:none">
+</div>
+<DIV id=MOB_OUT></div>
+
+<script language="JavaScript" src="../source/common.js"></script>
+<script language="JavaScript" src="../source/meobs.js"></script>
+<script language="JavaScript" src="../source/meob.js"></script>
+<!--<script language="JavaScript" src="../source/meob-v11-src.js"></script>-->
+<script language="javascript">
+var oMEOB = new MEOB();
+oMEOB.set("MEOB.Template","templates/rss-t.html");
+oMEOB.set("MEOB.Static","props/rss.props");
+oMEOB.set("MEOB.WriteTo","MOB_OUT");
+oMEOB.set("MEOB.StyleSheet","stylesheet.css");
+oMEOB.set("MEOB.mergedelim.begin","[[");
+oMEOB.set("MEOB.mergedelim.end","]]");
+oMEOB.set("MEOB.rssproxy","../source/rssproxy.php");
+
+//DEBUG_LEVEL = FULL_DEBUG;
+
+oMEOB.main();
+</script>
+<noscript>
+	To view this page correctly, please upgrade your browser or enable Javascript support.
+</noscript>
+</body>
+</html>

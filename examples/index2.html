@@ -1,0 +1,32 @@
+<html>
+<body>
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<div id="MEOB" style="display:none">
+	<div id="welcome.blurb">This is a working example of MEOB - the revolutionary 
+	way of coding your web pages that separates Data from Presentation in HTML. MEOB 
+	frees your application server to get on with processing data and empowers your web browser 
+	to be more than just a dumb terminal.</div>
+</div>
+<DIV id=MOB_OUT></div>
+
+<script language="JavaScript" src="../source/common.js"></script>
+<script language="JavaScript" src="../source/meobs.js"></script>
+<script language="JavaScript" src="../source/meob.js"></script>
+<script language="javascript">
+var oMEOB = new MEOB();
+oMEOB.set("MEOB.Template","templates/index-t.html");
+oMEOB.set("MEOB.Static","props/index.props");
+oMEOB.set("MEOB.WriteTo","MOB_OUT");
+oMEOB.set("MEOB.StyleSheet","stylesheet.css");
+oMEOB.set("MEOB.mergedelim.begin","[[");
+oMEOB.set("MEOB.mergedelim.end","]]");
+
+oMEOB.main();
+</script>
+<noscript>
+	Sorry, this page requires a browser that supports JavaScript in order to function properly. <br>
+	Your browser either does not support JavaScript or it has JavaScript support disabled. <br>
+	To view this page correctly, please upgrade your browser or enable Javascript support.
+</noscript>
+</body>
+</html>

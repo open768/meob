@@ -1,0 +1,320 @@
+<head>
+<style type="text/css">
+<!--
+.basic {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 12px;
+}
+-->
+</style>
+</head>
+<body class="basic">
+
+<h2> MEOB Documentation</h2> 
+<table width="100%" border="1" cellspacing="0" cellpadding="5" class="basic"> 
+  <tr> 
+    <td width="61%" bgcolor="#CCCCCC">&lt;html&gt;<br> 
+&lt;body&gt;</td> 
+    <td width="39%">&nbsp;</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><br> 
+&lt;link href=&quot;stylesheet.css&quot; rel=&quot;stylesheet&quot; type=&quot;text/css&quot;&gt;<br> 
+    </td> 
+    <td>any stylesheets
+          that your page uses should be included here along with any references
+          to javascript files.</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"> &lt;div
+        id=&quot;MEOB&quot;&gt;<br> 
+&lt;div id=&quot;welcome.blurb&quot;&gt;This is a working example of MEOB - the
+revolutionary <br> 
+      way of coding your web pages that separates Data from Presentation in HTML.
+      MEOB <br> 
+      frees your application server to get on with processing data and empowers
+      your web browser <br> 
+      to be more than just a dumb terminal.&lt;/div&gt;<br> 
+      <font color="#0000CC">&lt;div id=&quot;myvalue&quot;&gt;This is my value&lt;/div&gt;<br> 
+&lt;/div&gt; </td> 
+    <td> <p> 
+      Add dynamic data generated
+      by the application as key-value pairs. the div id contains the name values
+      (see the blue text).
+      <p>Alternatively use Javascript (see below)</p> 
+       
+      <p>&nbsp;</p></td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"> &lt;DIV
+        id=MEOB_OUT&gt;&lt;/div&gt;</td> 
+    <td> <font color="red">Mandatory: The
+        DIV that will contain the HTML content after it has been merged on the
+        client side.</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><p>&lt;script
+          language=&quot;JavaScript&quot; src=&quot;common.js&quot;&gt;&lt;/script&gt;<br> 
+&lt;script language=&quot;JavaScript&quot; src=&quot;meobs.js&quot;&gt;&lt;/script&gt;<br> 
+&lt;script language=&quot;JavaScript&quot; src=&quot;meob.js&quot;&gt;&lt;/script&gt;<br> 
+        </p></td> 
+    <td>javascript files needed
+        for MEOB</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><p>&lt;script
+          language=&quot;javascript&quot;&gt;<br> 
+        var oMEOB = new MEOB();<br> 
+        <em>oMEOB.set(&quot;MEOB.Template&quot;,&quot;index3-t.html&quot;);<br> 
+        oMEOB.set(&quot;MEOB.Static&quot;,&quot;index.props&quot;);<br> 
+        oMEOB.set(&quot;MEOB.WriteTo&quot;,&quot;MEOB_OUT&quot;);<br> 
+        oMEOB.set(&quot;MEOB.StyleSheet&quot;,&quot;stylesheet.css&quot;);<br> 
+        oMEOB.set(&quot;MEOB.mergedelim.begin&quot;,&quot;[[&quot;);<br> 
+        oMEOB.set(&quot;MEOB.mergedelim.end&quot;,&quot;]]&quot;);</em><br> 
+		//DEBUG_LEVEL = FULL_DEBUG<br>;
+
+
+        oMEOB.set(<font color="#0000CC">&quot;myvalue&quot;, &quot;This is my
+        value&quot;);<br> 
+        <em>oMEOB.main();</em><br> 
+&lt;/script&gt;<br> 
+        </p></td> 
+    <td><p>creates the MEOB
+          object and populates it with Dynamic values - This is also where you
+          can add your own dynamic values pairs (see blue text)</p> 
+      <p>the Dynamic Values
+          which start with &quot;MEOB&quot; are <a href="#special">special</a> and
+          must be set correctly to work</p>
+      <p>
+      DEBUG can be set to DEBUG_SOME, DEBUG_MORE, DEBUG_FULL and shows the inner workings of the Meob parser<
+    </td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">&nbsp;</td> 
+    <td>&nbsp;</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">&lt;noscript&gt;<br> 
+      Sorry, this page requires a browser that supports JavaScript in order to
+          function properly. &lt;br&gt;<br> 
+      Your browser either does not support JavaScript or it has JavaScript support
+      disabled. &lt;br&gt;<br> 
+      To view this page correctly, please upgrade your browser or enable Javascript
+      support.<br> 
+&lt;/noscript&gt;</td> 
+    <td>this gets displayed
+        if your browser doesnt support javascript</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">&lt;/body&gt;<br> 
+&lt;/html&gt; </td> 
+    <td>&nbsp;</td> 
+  </tr> 
+</table> 
+<h2><a name="special">Special </a>Variables</h2> 
+<table width="102%" border="1" cellpadding="0" cellspacing="0" class="basic"> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><p><em>oMEOB.set(&quot;MEOB.Template&quot;,&quot;<a href="#template">index3-t.html</a>&quot;);<br> 
+        </em><br> 
+        </p></td> 
+    <td><p>the name of the <a href="#template">template</a> file
+          which contains layout and placeholder information </p></td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>oMEOB.set(&quot;MEOB.Static&quot;,&quot;index.props&quot;);<br> 
+      </em></td> 
+    <td>the name of the file
+        that contains content that does not change - <a href="#static">static
+        content</a> </td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>oMEOB.set(&quot;MEOB.WriteTo&quot;,&quot;MEOB_OUT&quot;);<br> 
+      </em></td> 
+    <td>the Name of the DIV
+        to which the HTML should be written to. This should <a href="#DIV">match</a> the
+        id of the DIV above (&lt;DIV id=MEOB_OUT&gt;&lt;/div&gt;)</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>oMEOB.set(&quot;MEOB.StyleSheet&quot;,&quot;stylesheet.css&quot;);<br> 
+      </em></td> 
+    <td>dynamic stylesheet
+        that should be used (not implemented)</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>oMEOB.set(&quot;MEOB.mergedelim.begin&quot;,&quot;[[&quot;);<br> 
+      </em></td> 
+    <td>sequence of characters
+        used to identify the start of a placeholder found in the template file</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>oMEOB.set(&quot;MEOB.mergedelim.end&quot;,&quot;]]&quot;);</em></td> 
+    <td>sequence of characters
+        used to identify the end of a placeholder found in the template file.</td> 
+  </tr> 
+</table> 
+<h2><a name="template" id="template">Template
+      Files </a></h2> 
+<p>A template file is a valid
+    HTML file that has <a href="#placeholders">placeholders</a> embedded within
+    it. Javascript code should be placed in separate js files that are referenced
+    by the template. </p> 
+<p>At present placeholders
+    of the same kind can not be nested. </p> 
+<h2><a name="placeholders" id="placeholders"></a>placeholders</h2> 
+<p>here are the possible kinds
+    of placeholders</p> 
+<table width="102%" border="1" cellpadding="0" cellspacing="0" class="basic"> 
+  <tr> 
+    <td width="18%" bgcolor="#CCCCCC"><p><em>[[var]]<br> 
+        </em><br> 
+        </p></td> 
+    <td width="82%"><p>A simple
+          variable substitution. MEOB will look through the IDs of the static
+          and dynamic variables and replace this tag with the value if found.</p></td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>[[ifne.var]] <font color="#0000CC"><br> 
+      HTML fragment <br> 
+      [[end ifne.var]]<br> 
+      </em></td> 
+    <td>displays the HTML
+        fragment if the variable is not found</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>[[if.var]] <font color="#0000CC"><br> 
+      HTML fragment <br> 
+      [[end if.var]]<br> 
+      </em></td> 
+    <td>displays the HTML
+        fragment if the variable is found</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>[[if.var1
+          eq var2]] <font color="#0000CC"><br> 
+      HTML fragment <br> 
+      [[end if.var]]<br> 
+      </em></td> 
+    <td>displays the HTML
+        fragment if the variable1 is equal to variable 2</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>[[if.var1
+          ne var2]] <font color="#0000CC"><br> 
+      HTML fragment <br> 
+      [[end if.var]]<br> 
+      </em></td> 
+    <td>displays the HTML
+        fragment if the variable1 is <strong>not equal </strong>to variable 2</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>[[if.var1
+          gt var2]] <font color="#0000CC"><br> 
+      HTML fragment <br> 
+      [[end if.var]]<br> 
+      </em></td> 
+    <td>displays the HTML
+        fragment if the variable1 is<strong> greater than</strong> variable 2</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>[[if.var1
+          lt var2]] <font color="#0000CC"><br> 
+      HTML fragment <br> 
+      [[end if.var]]</em></td> 
+    <td>displays the HTML
+        fragment if the variable1 is<strong> less than</strong> variable 2</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC"><em>[[repeat.var loopbreak n]] <font color="#0000CC"><br> 
+      HTML fragment <br> 
+      [[end repeat.var]]</em></td> 
+    <td>Repeats the HTML fragment
+        for as many loop control variables of the form <strong>var.[n] </strong>are
+        defined, where n is a number from 1 upwards.</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">[[loop]]</td> 
+    <td>When within a repeat
+        block is replaced by the value of <strong>var.[n]</strong> </td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">[[loop.<font color="#0000FF">myvalue]]</td> 
+    <td>When within a repeat
+        block is replaced by the value of <strong>var.[n].<font color="#0000FF">myvalue</strong></td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">[[loopkey]]</td> 
+    <td>used within repeat
+        blocks for debugging purposes to show the name of the current loop control
+        variable.</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">[[if.loopbreaknow eq y]]...[[end if.loopbreaknow]]</td> 
+    <td>
+   	used within repeat, process contents when loop index is 0, either at start of loop, or when loop breaks  due to loopbreak    </td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">[[if.loopbreaknext eq y]]...[[end if.loopbreaknext]]</td> 
+    <td>
+   	 used within repeat, process contents when loop index is going to be 0, either before loop breaks  due to loopbreak or at last item.     </td> 
+  </tr> 
+  <tr>
+    <td bgcolor="#CCCCCC">[[loopprevious]]</td>
+    <td>the previous loop item if it exists </td>
+  </tr>
+  <tr>
+    <td bgcolor="#CCCCCC">[[loopnext]]</td>
+    <td>the next loop item if it exists </td>
+  </tr>
+  <tr> 
+    <td bgcolor="#CCCCCC">[[include.<font color="#0000FF">myfilename]]</td> 
+    <td>inserts the contents of another template </td> 
+  </tr> 
+</table> 
+<h2>Static Variables<a name="static"></a></h2> 
+<p> Static variables are kept
+    in a properties file which is a well formed XML file with Key Value pairs. <br> 
+  Here is an example of a properties file: </p> 
+<table width="102%" border="1" cellpadding="0" cellspacing="0" class="basic"> 
+  <tr> 
+    <td width="61%" bgcolor="#CCCCCC">&lt;?xml
+        version=&quot;1.0&quot; encoding=&quot;UTF-8&quot; ?&gt; <br> 
+&lt;MEOB&gt;<br> 
+    </td> 
+    <td width="39%">&nbsp;</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">&lt;div
+        id=&quot;document.title&quot;&gt;if example&lt;/div&gt;<br> 
+&lt;div id=&quot;control1&quot;&gt;yes&lt;/div&gt;<br> 
+&lt;div id=&quot;value1&quot;&gt;This text is visible and should be in red&lt;/div&gt;<br> 
+&lt;div id=&quot;value2&quot;&gt;this text should not be visible&lt;/div&gt;<br> 
+&lt;div id=&quot;blurb1&quot;&gt;This example shows how a fragment of HTML is
+displayed when a control value is present&lt;/div&gt;<br> 
+&lt;div id=&quot;blurb2&quot;&gt;there should be a table with a red background
+above, but nothing below&lt;/div&gt;<br> 
+&lt;div id=&quot;control3&quot;&gt;12&lt;/div&gt;<br> 
+&lt;div id=&quot;userid&quot;&gt;12&lt;/div&gt;<br> 
+    </td> 
+    <td>key value pairs are defined here and are substituted into the placeholders
+      in the template by the MEOB code.</td> 
+  </tr> 
+  <tr> 
+    <td bgcolor="#CCCCCC">&lt;/MEOB&gt;</td> 
+    <td>&nbsp;</td> 
+  </tr> 
+</table> 
+<h2>Server Side Tools</h2> 
+<p>server side PHP code has
+    been created to generate MEOB code. Please contact the Author.</p> 
+<h2>Development Tools</h2> 
+<p>As MEOB uses HTML and simple
+    XML, no special tools are needed to write MEOB.</p> 
+<h2>License</h2> 
+<p> Meob Copyright (C) 2006
+    Sunil G Vanmullem This program comes with ABSOLUTELY NO WARRANTY; for details
+    see www.das-kuechen-studio.co.uk/solutions This is free software, and you
+    are welcome to redistribute it under certain conditions; see www.das-kuechen-studio.co.uk/solutions
+    for details </p> 
+<p>&nbsp; </p> 
+<p>&nbsp;</p> 
+</body>

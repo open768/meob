@@ -1,0 +1,30 @@
+<html>
+<body>
+
+<link href="stylesheet.css" rel="stylesheet" type="text/css">
+<div id="MEOB" style="display:none">
+	<div id="MEOB.Template">templates/index-t.html</div>
+	<div id="MEOB.Static">props/index.props</div>
+	<div id="MEOB.WriteTo">MOB_OUT</div>
+	<div id="MEOB.StyleSheet">stylesheet.css</div>
+	<div id="MEOB.mergedelim.begin">[[</div>
+	<div id="MEOB.mergedelim.end">]]</div>
+	<div id="welcome.blurb">This is a working example of MEOB - the revolutionary 
+	way of coding your web pages that separates Data from Presentation in HTML. MOB 
+	frees your application server to get on with processing data and empowers your web browser 
+	to be more than just a dumb terminal.</div>
+</div>
+<DIV id=MOB_OUT></DIV>
+
+<script language="JavaScript" src="../source/common.js"></script>
+<script language="JavaScript" src="../source/meobs.js"></script>
+<script language="JavaScript" src="../source/meob.js"></script>
+
+<!-- ############################################################################# -->
+<script language="javascript">
+DEBUG__LEVEL = FULL_DEBUG;
+var oMEOB = new MEOB();
+oMEOB.SHOW_PROGRESS =false;
+oMEOB.main();
+</script>
+</html>
