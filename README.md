@@ -12,3 +12,5 @@ Separating further the document structure from the document content will have
 This repository contains a Proof of Concept implementation of the concept.
 
 note to view examples you will need at least a lightweight web server, how about tiny web server ?
+
+this project was completed in in 2011 since when client side templating has advanced enormously. The code is provided for reference.
