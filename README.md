@@ -10,3 +10,5 @@ Separating further the document structure from the document content will have
 3) allows for the possibility that the end user can choose the document structure.
 
 This repository contains a Proof of Concept implementation of the concept.
+
+note to view examples you will need at least a lightweight web server, how about tiny web server ?
